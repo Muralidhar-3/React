@@ -7,13 +7,14 @@ function App() {
   const addValue = () => {
     counter++;
     setCounter(counter);
-    console.log(counter);
   };
 
   const decreaseValue = () => {
+    if(counter === 0){
+      return;
+    }
     counter = counter - 1;
     setCounter(counter);
-    console.log(counter);
   };
 
   return (
